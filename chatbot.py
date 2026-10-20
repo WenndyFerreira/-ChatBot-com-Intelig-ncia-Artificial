@@ -28,6 +28,24 @@ if caminho_fundo.exists():
             background: transparent;}}
         </style>""", unsafe_allow_html=True)
 
+# ESTILO VISUAL DAS MENSAGENS
+st.markdown(""" <style>
+
+/* FUNDO DAS MENSAGENS DO CHATBOT */
+[data-testid="stChatMessage"] {
+    background-color: rgba(20, 22, 30, 0.90) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    padding: 15px;
+    margin-bottom: 12px;}
+
+/* COR DO TEXTO */
+[data-testid="stChatMessage"] p {
+    color: #FFFFFF !important;
+    font-size: 15px;
+    line-height: 1.7;} </style>""", unsafe_allow_html=True)
+
+
 # CONFIGURAÇÃO DA API GEMINI
 PASTA_PROJETO = Path(__file__).resolve().parent
 
