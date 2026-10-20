@@ -193,7 +193,7 @@ def visualizar_termos():
 # TELA 1: CADASTRO
 if not st.session_state.cadastro_concluido:
     st.title("💬 ChatBot com IA")
-    st.write("Bem-vindo!")
+    st.write("### Seja muito bem-vindo(a)!")
     st.write("Antes de começar, informe seus dados " "e escolha uma foto para seu perfil.")
 
     with st.form("formulario_cadastro"):
@@ -234,16 +234,14 @@ else:
     nome = st.session_state.nome_usuario
     foto = st.session_state.foto_usuario
 
-    col_foto, col_info = st.columns(
-        [1, 5],
-        vertical_alignment="center")
+    col_foto, col_info = st.columns([1, 5], vertical_alignment="center")
 
     with col_foto:
         st.image(foto, width=72)
 
     with col_info:
-        st.title("ChatBot com IA")
-        st.caption(f"Conversando como {nome}")
+        st.title("ChatBot inciado!")
+        st.caption(f"Logado como: {nome}")
 
     if st.button("Trocar usuário"):
 
@@ -280,7 +278,7 @@ else:
     # CAMPO PARA ENVIAR MENSAGENS
 
     mensagem_usuario = st.chat_input(
-        "Escreva sua mensagem aqui")
+        "Escreva sua mensagem aqui:")
 
     if mensagem_usuario:
 
